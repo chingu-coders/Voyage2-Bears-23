@@ -1,0 +1,47 @@
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:flowtype/recommended
+
+parserOptions:
+  ecmaVersion: 6
+
+env:
+  es6: true
+  browser: true
+  node: true
+
+globals:
+  log: true
+  metrics: true
+  JSX: true
+
+plugins:
+  - react
+  - flowtype
+
+settings:
+  flowtype:
+    onlyFilesWithFlowAnnotation: true
+
+rules:
+  max-params: ["warn", 8]
+  indent:
+    - 0
+  react/jsx-indent-props:
+    - 2
+    - 2
+  space-before-function-paren:
+    - 0
+  no-unused-vars:
+    - 2
+    - varsIgnorePattern: "[rR]eact"
+  complexity:
+    - 2
+    - max: 8
+
+ecmaFeatures:
+  jsx: true
+  experimentalObjectRestSpread: true
+  modules: true
+  classes: true
