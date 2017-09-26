@@ -1,7 +1,7 @@
 {
-  "name": "slinker",
+  "name": "slinker-web",
   "version": "0.0.1",
-  "description": "slinker - a link scraping slack bot",
+  "description": "web application for slinker",
   "main": "index.js",
   "repository": {
     "url": "git@github.com:chingu-coders/Voyage2-Bears-23.git",
