@@ -1,0 +1,64 @@
+{
+  "name": "slinker-bot",
+  "version": "0.0.1",
+  "description": "slinker - a link scraping slack bot",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:chingu-coders/Voyage2-Bears-23.git",
+    "type": "git"
+  },
+  "author": "Peter Krevenets <<peter.k.nets@gmail.com>>, Abdulah Hamzic <<abdulahhamzic@gmail.com>>, Gary Smith <<scopevale@gmail.com>>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^4.0.0",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.7.2",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.55.0",
+    "istanbul": "^0.4.5",
+    "jest": "^21.1.0",
+    "jsdom": "^11.2.0",
+    "mocha": "^3.5.3",
+    "nock": "^9.0.20",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.12.1",
+    "parallelshell": "^3.0.1",
+    "postcss-cli": "^4.1.1",
+    "sass-lint": "^1.11.1",
+    "sinon-stub-promise": "^4.0.0",
+    "uglify-js": "^3.1.2"
+  },
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "errorhandler": "^1.5.0",
+    "express": "^4.15.4",
+    "moment": "^2.18.1",
+    "ramda": "^0.24.1",
+    "serve-favicon": "^2.4.4",
+    "socket.io": "^2.0.3",
+    "superagent": "^3.6.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
+    ]
+  }
+}
