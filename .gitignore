@@ -36,5 +36,9 @@ node_modules/
 # dotenv environment variables file
 .env
 
+# IDE files
+.vscode/
+.idea/
+
 # temp files
 tmp/
