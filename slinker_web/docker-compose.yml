@@ -1,0 +1,7 @@
+app:
+  extends:
+    file: docker-compose.build.yml
+    service: npm
+  command: run start::dev
+  ports:
+    - 3000

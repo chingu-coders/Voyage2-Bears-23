@@ -1,0 +1,57 @@
+functional-tests:
+  extends:
+    file: docker-compose.build.yml
+    service: npm
+  command: run wdio::functional::hub
+  links:
+    - app
+    - hub
+    - wiremock
+
+babel-node:
+  extends:
+    file: docker-compose.build.yml
+    service: node
+  entrypoint: ./node_modules/.bin/babel-node
+
+app:
+  image: ${IMAGE}
+  expose:
+    - 3000
+  ports:
+    - 3000
+  env_file: .env.test
+  links:
+    - wiremock
+
+wiremock:
+  extends:
+    file: docker-compose.build.yml
+    service: wiremock
+  ports:
+    - 8080
+
+hub:
+  extends:
+    file: docker-compose.build.yml
+    service: selenium-hub
+  ports:
+    - 4444
+
+firefox:
+  extends:
+    file: docker-compose.build.yml
+    service: selenium-node-firefox
+  ports:
+    - 5900
+  links:
+    - hub
+
+chrome:
+  extends:
+    file: docker-compose.build.yml
+    service: selenium-node-chrome
+  ports:
+    - 5900
+  links:
+    - hub
