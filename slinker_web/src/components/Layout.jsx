@@ -22,7 +22,7 @@ type Props = {
 }
 
 const Layout = ({ component }: Props) => (
-  <div className="'container">
+  <div className="container">
     <Page { ...component } />
   </div>
 );

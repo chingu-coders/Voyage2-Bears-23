@@ -44,7 +44,7 @@ xdescribe('server/routes/slinker', function () {
   });
 
   it('should mount slinker at /slinker', function () {
-    console.log(spy);
+    console.log(spy);   // eslint-disable-line no-console
     spy.should.have.been.calledWith(
       '/',
       slinkerRouter,
@@ -53,7 +53,7 @@ xdescribe('server/routes/slinker', function () {
   });
 
   it('should mount api at /api', function () {
-    console.log(spy.args);
+    console.log(spy.args);   // eslint-disable-line no-console
     spy.should.have.been.calledWith(
       '/api',
       {}
