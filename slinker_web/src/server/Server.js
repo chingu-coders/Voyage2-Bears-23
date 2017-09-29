@@ -15,6 +15,7 @@ import {
   // pageErrorHandler,
   errorHandlers
 } from 'server/middleware';
+import { slinkerBot } from '../../../slinker_bot/build';
 import https from 'https';
 import ssl from 'server/helpers/ssl';
 import routes from 'server/routes';
@@ -40,6 +41,7 @@ class Server {
       // load middleware and routes
       middleware(this.app);
       routes(this.app);
+      slinkerBot();
 
       // Setup error handlers
       pageNotFoundHandler(this.app);
