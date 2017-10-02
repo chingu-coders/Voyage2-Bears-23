@@ -1,0 +1,38 @@
+node:
+  image: node:6.11.3
+  volumes:
+    - .:/usr/src/app
+  working_dir: /usr/src/app
+
+npm:
+  extends:
+    service: node
+  entrypoint: npm
+
+npm_tests:
+  extends:
+    service: npm
+  links:
+    - wiremock
+
+wiremock:
+  image: rodolpheche/wiremock:2.8.0
+  volumes:
+    - ./tests/wiremock:/home/wiremock
+  expose:
+    - 8080
+
+selenium-standalone-firefox:
+  image: selenium/standalone-firefox-debug:3.1.0
+
+selenium-standalone-chrome:
+  image: selenium/standalone-chrome-debug:3.1.0
+
+selenium-hub:
+  image: selenium/hub:3.1.0
+
+selenium-node-firefox:
+  image: selenium/node-firefox:3.1.0
+
+selenium-node-chrome:
+  image: selenium/node-chrome:3.1.0

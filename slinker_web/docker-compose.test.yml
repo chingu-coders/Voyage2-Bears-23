@@ -1,0 +1,52 @@
+functional-tests:
+  extends:
+    file: docker-compose.build.yml
+    service: npm
+  command: run wdio::${SUITE}::${BROWSER}
+  links:
+    - app
+    - selenium_${BROWSER}
+    - wiremock
+
+babel-node:
+  extends:
+    file: docker-compose.build.yml
+    service: node
+  entrypoint: ./node_modules/.bin/babel-node
+
+app:
+  extends:
+    service: babel-node
+  command: src/index.js
+  env_file: .env.test
+  ports:
+    - 3001:3000
+  links:
+    - wiremock
+
+selenium_firefox:
+  extends:
+    file: docker-compose.build.yml
+    service: selenium-standalone-firefox
+  links:
+    - app
+  ports:
+    - 4444:4444
+    - 5900:5900
+
+selenium_chrome:
+  extends:
+    file: docker-compose.build.yml
+    service: selenium-standalone-chrome
+  links:
+    - app
+  ports:
+    - 4444:4444
+    - 5900:5900
+
+wiremock:
+  extends:
+    file: docker-compose.build.yml
+    service: wiremock
+  ports:
+    - 8080:8080

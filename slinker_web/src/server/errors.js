@@ -5,7 +5,6 @@
  * @ticket SLNKR-002
  * @link https://github.com/chingu-coders/Voyage2-Bears-23/projects/1#card-4811806
  *
- * @flow
  */
 const appError = message => _createError(message);
 

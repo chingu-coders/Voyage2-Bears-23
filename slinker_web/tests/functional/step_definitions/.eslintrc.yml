@@ -1,0 +1,4 @@
+rules:
+  new-cap:
+    - error
+    - capIsNew: false

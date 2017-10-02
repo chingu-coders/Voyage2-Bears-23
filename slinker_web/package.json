@@ -89,7 +89,7 @@
     "watch::client::js": "NODE_PATH=./src nodemon -w src/client/public/js/ -w src/components/ -w src/lib/ --ext '.js','.jsx' --exec 'npm run build::js::dev'",
     "watch::server": "nodemon --inspect -w .env -w src/ --ext '.js','.jsx' --require dotenv/config --require babel-register src/index.js",
     "watch::css": "NODE_PATH=./src nodemon -w src/client/scss --ext '.scss' --exec 'npm run build::css'",
-    "qa": "npm run qa::lint",
+    "qa": "npm run qa::lint && npm run qa::flow",
     "qa::lint": "eslint --ext .jsx --ext .js src/ tests/",
     "qa::flow": "flow status",
     "test": "echo '\nLinting...' && npm run qa && echo '\nUnit tests...' && npm run test::unit && echo '\nIntegration tests...' && npm run test::integration && echo '\nContract tests...' && npm run test::contract && echo '\nFunctional tests...' && npm run test::functional",
