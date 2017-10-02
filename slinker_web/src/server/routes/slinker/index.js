@@ -9,10 +9,10 @@
  */
 import { Router as router } from 'express';
 import React from 'react';
-import Layout from '../../../components/Layout';
-import config from '../../../config';
+import Layout from 'server/../components/Layout';
+import config from 'server/../config';
 import api from './api';
-import reactPageRendererMiddleware from '../../middleware/reactPageRendererMiddleware';
+import reactPageRendererMiddleware from 'server/middleware/reactPageRendererMiddleware';
 import log from 'loglevel';
 
 const slinkerRouter = router();

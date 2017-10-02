@@ -18,6 +18,6 @@ const server: ServerType = {
   context_api: ''
 };
 
-server.context_api = `${server.context_root}api`;
+server.context_api = `${server.context_root}/api`;
 
 export default server;

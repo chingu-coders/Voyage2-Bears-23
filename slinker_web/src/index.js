@@ -8,13 +8,14 @@
  * @flow
  */
 import 'app-module-path/register';
-import server from './server';
+import server from 'server';
 import log from 'loglevel';
 
 global.log = log;
 
 process.env.__app_name = 'slinker-web--app';
 
+log.setLevel(process.env.LOG_LEVEL || 'warn');
 try {
   server.boot();
   server.serve();

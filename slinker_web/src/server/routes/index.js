@@ -8,8 +8,8 @@
  * @flow
  */
 import log from 'loglevel';
-import config from '../../config';
-// import slinkerRouter from './slinker';
+import config from 'server/../config';
+// import slinkerRouter from 'server/routes/slinker';
 import routes from 'server/routes/routes';
 
 const mount = (app: Object) => {
