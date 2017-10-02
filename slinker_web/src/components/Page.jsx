@@ -9,7 +9,7 @@
  */
 import React from 'react';
 import Slinker from 'components/pages/Slinker';
-import type { ConfigType } from '../config';
+import type { ConfigType } from 'components/../config';
 
 type Props = {
   name: string,

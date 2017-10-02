@@ -9,7 +9,7 @@
  */
 import React from 'react';
 import Page from 'components/Page';
-import type { ConfigType } from '../config';
+import type { ConfigType } from 'components/../config';
 
 type Props = {
   component: {

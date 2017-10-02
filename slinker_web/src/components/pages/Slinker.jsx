@@ -9,7 +9,7 @@
  */
 import React from 'react';
 
-import type { ConfigType } from '../../config';
+import type { ConfigType } from 'components/../config';
 
 type Props = {
   config: ConfigType

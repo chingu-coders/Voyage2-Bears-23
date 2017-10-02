@@ -7,7 +7,7 @@
  *
  * @flow
  */
-import Server from '../server/Server';
-import config from '../config';
+import Server from 'server/Server';
+import config from 'server/../config';
 
 export default new Server(config.server.port);

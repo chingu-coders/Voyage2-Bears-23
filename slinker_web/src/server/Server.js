@@ -18,7 +18,7 @@ import {
 import https from 'https';
 import ssl from 'server/helpers/ssl';
 import routes from 'server/routes';
-import config from '../config';
+import config from 'server/../config';
 import log from 'loglevel';
 
 class Server {
@@ -48,18 +48,16 @@ class Server {
     }
 
     serve() {
-      log.info('Starting Server on Port:{port}', {
-        port: this.port
-      });
+      log.info('Starting Server on Port:', this.port);
 
       try {
         // TODO - enable ssl, currently not working due to cert/key
         ssl(https, this.app, this.port);
-        log.info('SSL Server Listening on Port {port}', {port: this.port});
+        log.info('SSL Server Listening on Port:', this.port);
       } catch (err) {
         this.app.listen(this.port);
         log.warn('Unable to start server with SSL');
-        log.info('Non-SSL Server Listening on Port {port}', {port: this.port});
+        log.info(`Non-SSL Server Listening on Port:`, this.port);
       }
   }
 }

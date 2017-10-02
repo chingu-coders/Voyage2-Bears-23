@@ -3,8 +3,13 @@ extends:
   - plugin:react/recommended
   - plugin:flowtype/recommended
 
-parserOptions:
-  ecmaVersion: 6
+parserOptions: {
+  ecmaVersion: 6,
+  sourceType: "module",
+  ecmaFeatures: {
+    jsx: true
+  }
+}
 
 env:
   es6: true
@@ -39,9 +44,3 @@ rules:
   complexity:
     - 2
     - max: 8
-
-ecmaFeatures:
-  jsx: true
-  experimentalObjectRestSpread: true
-  modules: true
-  classes: true

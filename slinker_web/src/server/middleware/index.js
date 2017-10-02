@@ -12,7 +12,7 @@ import favicon from 'serve-favicon';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
-import pageNotFoundHandlerMiddleware from '../../server/middleware/PageNotFoundHandlerMiddleware';
+import pageNotFoundHandlerMiddleware from 'server/middleware/PageNotFoundHandlerMiddleware';
 import errorhandler from 'errorhandler';
 // TODO import static error handling m/ware
 
