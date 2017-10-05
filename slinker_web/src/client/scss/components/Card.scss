@@ -1,0 +1,73 @@
+.o-slinker-card {
+  border: 2px solid #f00;
+  border-radius: 5px;
+  height: 7.5rem;
+  width: 7.5rem;
+  padding: 1px;
+
+  &--collapsed {
+    border: 2px solid #222;
+    background-color: #eee;
+    border-radius: 5px;
+    height: auto;
+    width: 7.5rem;
+    padding: 1px;
+  }
+
+}
+
+.o-slinker-cardheader {
+  position: relative;
+  background-color: #248383;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+
+  &> span.o-title {
+    width: 90%;
+    height: 100%;
+  }
+
+  &> span.o-icon {
+    position: absolute;
+    display: inline-block;
+    right: -0.9rem;
+    top: -0.6rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-repeat: no-repeat;
+
+    &__delete {
+      background-image: url('/images/close-cross-icon.svg');
+
+      &:hover { // placeholder - eventually serve stateful images on hover
+        background-color: plum;
+      }
+    }
+
+    &__edit {
+      top: 0.85rem;
+      background-image: url('/images/edit-pencil-icon.svg');
+
+      &:hover { // placeholder - eventually serve stateful images on hover
+        background-color: powderblue;
+      }
+    }
+
+  }
+
+
+
+
+  // color: #773763
+  // color: #238177
+  // color: #177238
+  // color: #238101
+  // color: #101238
+  // color: #FFFB00
+  // color: #d80027;
+
+}
+
+
+

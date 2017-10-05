@@ -8,6 +8,8 @@
 .*/node_modules/react-motion/.*
 .*/node_modules/nock/.*
 .*/node_modules/editions/.*
+.*/node_modules/immutable/.*
+.*/node_modules/radium/.*
 .*/src/content/.*
 
 [include]

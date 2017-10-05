@@ -10,6 +10,7 @@
   "author": "Peter Krevenets <<peter.k.nets@gmail.com>>, Abdulah Hamzic <<abdulahhamzic@gmail.com>>, Gary Smith <<scopevale@gmail.com>>",
   "license": "MIT",
   "devDependencies": {
+    "@storybook/react": "^3.3.0-alpha.1",
     "autoprefixer": "^7.1.4",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.0",
@@ -27,6 +28,7 @@
     "chai-as-promised": "^7.1.1",
     "chai-enzyme": "^0.8.0",
     "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
     "dotenv": "^4.0.0",
     "enzyme": "^2.9.1",
     "eslint": "^4.7.2",
@@ -46,8 +48,10 @@
     "react-test-renderer": "^16.0.0",
     "require-reload": "^0.2.2",
     "sass-lint": "^1.11.1",
+    "sass-loader": "^6.0.6",
     "sinon-chai": "^2.13.0",
     "sinon-stub-promise": "^4.0.0",
+    "style-loader": "^0.19.0",
     "supertest": "^3.0.0",
     "uglify-js": "^3.1.2",
     "wdio-browserstack-service": "^0.1.12",
@@ -76,6 +80,7 @@
     "superagent": "^3.6.0"
   },
   "scripts": {
+    "storybook": "start-storybook -s ./src/client/public -p 9001 -c ./.storybook",
     "clean::all": "npm run clean && rm -rf node_modules",
     "clean": "rm -rf build",
     "start": "node build/",
