@@ -83,7 +83,7 @@
     "build": "npm run clean && npm run build::server && npm run build::css && npm run build::assets && npm run build::js",
     "build::server": "babel src -d build --source-maps",
     "build::css": "node-sass --source-map true --output-style compressed src/client/scss/style.scss build/client/public/css/style.css && npm run build::css::prefix ",
-    "build::css::prefix": "postcss --use autoprefixer --autoprefixer.browsers \"last 2 versions, ie >= 9, Android >= 4, UCAndroid >= 1\" --autoprefixer.cascade false build/client/public/css/*.css -d build/client/public/css/",
+    "build::css::prefix": "postcss --use autoprefixer --autoprefixer.browsers \"last 2 versions, ie >= 9, Android >= 4, UCAndroid >= 10\" --autoprefixer.cascade false build/client/public/css/*.css -d build/client/public/css/",
     "build::assets": "cp -r src/client/public build/client && cp src/server/*pem build/server",
     "build::js": "cross-env NODE_ENV=production NODE_PATH=./src browserify -d -e src/client/public/js/app.jsx --extension=jsx -u 'node_modules/*' | uglifyjs --mangle --compress -o build/client/public/js/app.js",
     "build::js::dev": "cross-env NODE_PATH=./src browserify -d -e src/client/public/js/app.jsx --extension=jsx -u 'node_modules/*' -o build/client/public/js/app.js",
