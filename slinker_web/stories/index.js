@@ -34,15 +34,8 @@ storiesOf('Card', module)
   ));
 
 storiesOf('Collection', module)
-  .add('with Cards', () => (
+  .add('without Cards', () => (
     <Collection 
       title="Chingu Central"
-      collapsed={false}
-    />
-  ))
-  .add('collapsed mode', () => (
-    <Collection 
-      title="Chingu Central"
-      collapsed={true}
     />
   ));

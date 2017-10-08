@@ -11,12 +11,13 @@ import React from 'react';
 
 type Props = {
   title: string,
-  collapsed: boolean
+  collapsed: boolean,
+  handleHeaderClick: Function,
 };
 
 
-const CollectionHeader = ({title, collapsed}: Props) => (
-  <div className="o-slinker-collectionheader">
+const CollectionHeader = ({title, collapsed, handleHeaderClick}: Props) => (
+  <div className="o-slinker-collectionheader" onClick={handleHeaderClick}>
     <h2 className="o-title">{title}</h2>
     {
       collapsed

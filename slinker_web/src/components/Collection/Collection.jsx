@@ -12,24 +12,45 @@ import CollectionHeader from './CollectionHeader';
 
 type Props = {
   title: string,
-  collapsed: boolean
 };
 
-const renderExpanded = (title: string, collapsed: boolean) => (
+type State = {
+  collapsed: boolean,
+};
+
+const renderExpanded = (title: string, collapsed: boolean, onHeaderClick: Function) => (
   <div className="o-slinker-collection">
-    <CollectionHeader title={title} collapsed={collapsed} />
+    <CollectionHeader handleHeaderClick={onHeaderClick} title={title} collapsed={collapsed} />
     <span>This will show a list of cards</span>
   </div>
 );
 
-const renderCollapsed = (title: string, collapsed: boolean) => (
+const renderCollapsed = (title: string, collapsed: boolean, onHeaderClick: Function) => (
   <div className="o-slinker-collection">
-    <CollectionHeader title={title} collapsed={collapsed} />
+    <CollectionHeader handleHeaderClick={onHeaderClick} title={title} collapsed={collapsed} />
     </div>
 );
 
-const Collection = ({ title, collapsed }: Props) => (
-  collapsed ? renderCollapsed(title, collapsed) : renderExpanded(title, collapsed)
-);
+class Collection extends React.Component<Props, State> {
+  state = {
+    collapsed: false    
+  };
+
+  onHeaderClick = () => {
+    this.setState(prevState => ({
+      collapsed: !prevState.collapsed
+    }));
+  }
+
+  render() {
+    const { title } = this.props;
+
+    return (
+      this.state.collapsed 
+        ? renderCollapsed(title, this.state.collapsed, this.onHeaderClick) 
+        : renderExpanded(title, this.state.collapsed, this.onHeaderClick)          
+    );
+  }
+}
 
 export default Collection;
