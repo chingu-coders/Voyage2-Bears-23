@@ -23,7 +23,7 @@ const renderExpanded = (title: string) => (
 );
 
 const renderCollapsed = (title: string) => (
-  <div className="o-slinker-collection--collapsed">
+  <div className="o-slinker-collection">
     <CollectionHeader title={title} />
   </div>
 );
