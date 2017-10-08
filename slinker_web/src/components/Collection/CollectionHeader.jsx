@@ -11,13 +11,18 @@ import React from 'react';
 
 type Props = {
   title: string,
+  collapsed: boolean
 };
 
 
-const CollectionHeader = ({title}: Props) => (
+const CollectionHeader = ({title, collapsed}: Props) => (
   <div className="o-slinker-collectionheader">
     <h2 className="o-title">{title}</h2>
-    <span className="o-icon o-icon__open" />
+    {
+      collapsed
+        ? <button className="o-icon o-icon__expand">Expand or Collapse</button>
+        : <button className="o-icon o-icon__collapse">Expand or Collapse</button>
+    }
   </div>
 );
 

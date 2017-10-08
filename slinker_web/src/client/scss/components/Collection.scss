@@ -5,6 +5,7 @@
 }
 
 .o-slinker-collectionheader {
+  
   &> h2.o-title {
     position: relative;
     display: inline-block;
@@ -13,5 +14,29 @@
     font-weight: normal;
     font-size: 1rem;
     cursor: pointer;
+  }
+
+  &> button.o-icon {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    vertical-align: top;
+    padding: 1px 6px;
+    border: none;    
+    margin-left: 0.5rem;
+    text-indent: -1000rem;
+    background-color: rgba(0,0,0,0); 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1.2rem 1.2rem;
+    cursor: pointer;
+
+    &__expand {
+      background-image: url('/images/expand-icon.svg');
+    }
+
+    &__collapse {
+      background-image: url('/images/collapse-icon.svg');
+    }
   }
 }

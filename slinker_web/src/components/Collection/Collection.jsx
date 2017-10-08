@@ -15,21 +15,21 @@ type Props = {
   collapsed: boolean
 };
 
-const renderExpanded = (title: string) => (
+const renderExpanded = (title: string, collapsed: boolean) => (
   <div className="o-slinker-collection">
-    <CollectionHeader title={title} />
+    <CollectionHeader title={title} collapsed={collapsed} />
     <span>This will show a list of cards</span>
   </div>
 );
 
-const renderCollapsed = (title: string) => (
+const renderCollapsed = (title: string, collapsed: boolean) => (
   <div className="o-slinker-collection">
-    <CollectionHeader title={title} />
-  </div>
+    <CollectionHeader title={title} collapsed={collapsed} />
+    </div>
 );
 
 const Collection = ({ title, collapsed }: Props) => (
-  collapsed ? renderCollapsed(title) : renderExpanded(title)
+  collapsed ? renderCollapsed(title, collapsed) : renderExpanded(title, collapsed)
 );
 
 export default Collection;
