@@ -25,10 +25,12 @@
     border: none;    
     margin-left: 0.5rem;
     text-indent: -1000rem;
+    text-transform: none;
     background-color: rgba(0,0,0,0); 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 1.2rem 1.2rem;
+    outline: none;
     cursor: pointer;
 
     &__expand {
