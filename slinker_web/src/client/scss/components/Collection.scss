@@ -1,4 +1,17 @@
 .o-slinker-collection {
   padding: 1.2rem 1rem 1.2rem;
+  font-family: 'Ubuntu', Arial, sans-serif;
   border-bottom: 1px solid #000;
+}
+
+.o-slinker-collectionheader {
+  &> h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    line-height: 1.6;    
+    font-weight: normal;
+    font-size: 1rem;
+    cursor: pointer;
+  }
 }

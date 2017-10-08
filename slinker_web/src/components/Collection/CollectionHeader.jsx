@@ -15,10 +15,10 @@ type Props = {
 
 
 const CollectionHeader = ({title}: Props) => (
-  <span className="o-slinker-collectionheader">
-    <span className="o-title">{title}</span>
+  <div className="o-slinker-collectionheader">
+    <h2 className="o-title">{title}</h2>
     <span className="o-icon o-icon__open" />
-  </span>
+  </div>
 );
 
 export default CollectionHeader;
