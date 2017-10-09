@@ -36,6 +36,19 @@ storiesOf('Card', module)
 storiesOf('Collection', module)
   .add('without Cards', () => (
     <Collection 
-      title="Chingu Central"
+      title="resource-treasure"
     />
+  ))
+  .add('with multiple Collections', () => (
+    <div>
+      <Collection 
+        title="community-chat"
+      />
+      <Collection 
+        title="resources-treasure"
+      />
+      <Collection 
+        title="ask-for-help-here"
+      />
+    </div>
   ));
