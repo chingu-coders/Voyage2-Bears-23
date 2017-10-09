@@ -18,21 +18,14 @@ module.exports = {
               includePaths: ["../src/client/public/scss/"]
             }
           }
-        ] //,
-        // include: path.resolve(__dirname, '../src/client/public/scss/')
-
-        // test: /.scss$/,
-        // exclude: /node_modules/,
-        // loaders: [
-        //   { loader: 'style' },
-        //   { loader: 'css' },
-        //   { loader: 'postcss',
-        //     options: {
-        //       postcss: [ precss(), autoprefixer(), mqpacker() ],
-        //     },
-        //   },
-        //   { loader: 'sass' }
-        // ],
+        ]
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+        options: {
+              includePaths: ["../src/client/public/images/"]
+            }
       }
     ]
   }
