@@ -46,7 +46,7 @@ storiesOf('Collection', module)
       cards={cardsMockData}
     />
   ))
-  .add('with multiple Collections', () => (
+  .add('with multiple Collections w/o Cards', () => (
     <div>
       <Collection 
         title="community-chat"
@@ -56,6 +56,22 @@ storiesOf('Collection', module)
       />
       <Collection 
         title="ask-for-help-here"
+      />
+    </div>
+  ))
+  .add('with multiple Collections with Cards', () => (
+    <div>
+      <Collection 
+        title="community-chat"
+        cards={cardsMockData}
+      />
+      <Collection 
+        title="resources-treasure"
+        cards={cardsMockData}
+      />
+      <Collection 
+        title="ask-for-help-here"
+        cards={cardsMockData}
       />
     </div>
   ));
