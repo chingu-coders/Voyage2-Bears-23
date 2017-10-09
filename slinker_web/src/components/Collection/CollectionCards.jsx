@@ -28,10 +28,10 @@ const createCardsList = (card: {link: string, title: string, description: string
     collapsed={card.collapsed} />
 );
 
-const CollectionCards = ({cards}: Props) => {
+const CollectionCards = ({cards}: Props) => (
   <div className="o-slinker-collectioncards">
     { cards.map(createCardsList) }
   </div>
-};
+);
 
 export default CollectionCards;

@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Card from '../src/components/Card';
 import Collection from '../src/components/Collection/Collection';
+import { cardsMockData } from './mockData';
 
 import "../src/client/scss/style.scss";
 
@@ -37,6 +38,12 @@ storiesOf('Collection', module)
   .add('without Cards', () => (
     <Collection 
       title="resource-treasure"
+    />
+  ))
+  .add('with Cards', () => (
+    <Collection
+      title="resource-treasure"
+      cards={cardsMockData}
     />
   ))
   .add('with multiple Collections', () => (
