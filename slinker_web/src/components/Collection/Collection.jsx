@@ -9,9 +9,16 @@
  */
 import React from 'react'
 import CollectionHeader from './CollectionHeader';
+import CollectionCards from './CollectionCards';
 
 type Props = {
   title: string,
+  cards: Array<{
+    link: string,
+    title: string,
+    description: string,
+    collapsed: boolean,
+  }>,
 };
 
 type State = {
@@ -30,12 +37,12 @@ class Collection extends React.Component<Props, State> {
   }
 
   render() {
-    const { title } = this.props;
+    const { title, cards } = this.props;
 
     return (
       <div className="o-slinker-collection">
         <CollectionHeader handleHeaderClick={this.onHeaderClick} title={title} collapsed={this.state.collapsed} />
-        { this.state.collapsed && <span>This will show a list of cards</span> }
+        { this.state.collapsed && <CollectionCards cards={cards} /> }
       </div>
     );
   }
