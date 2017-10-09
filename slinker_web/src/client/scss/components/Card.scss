@@ -4,6 +4,8 @@
   height: 7.5rem;
   width: 7.5rem;
   padding: 1px;
+  box-shadow: 1px 1px 0px 0px rgba(94,93,102,0.08),
+              2px 2px 3px 0px rgba(94,93,102,0.1);
 
   &--collapsed {
     border: 2px solid #222;
