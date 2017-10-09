@@ -30,7 +30,7 @@ const createCardsList = (card: {link: string, title: string, description: string
 
 const CollectionCards = ({cards}: Props) => (
   <div className="o-slinker-collectioncards">
-    { cards.map(createCardsList) }
+    { cards && cards.map(createCardsList) }
   </div>
 );
 
