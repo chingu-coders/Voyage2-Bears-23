@@ -28,27 +28,26 @@
     text-indent: -1000rem;
     text-transform: none;
     background-size: 1.2rem 1.2rem;
-    background-color:#000;          
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: inherit;
     outline: none;
     cursor: pointer;
 
     &__expand {
-      /* https://codepen.io/noahblon/post/coloring-svgs-in-css-background-images */
-      -webkit-mask:  url('/images/expand-icon.svg') no-repeat 50% 50%;
-      mask: url('/images/expand-icon.svg') no-repeat 50% 50%;  
+      background-image: url('/images/expand-icon.svg');
 
       &:hover {
-        background-color: red;
+        background-image: url('/images/expand-icon--hovered.svg');
       }
     }
 
     &__collapse {
-      /* https://codepen.io/noahblon/post/coloring-svgs-in-css-background-images */
-      -webkit-mask:  url('/images/collapse-icon.svg') no-repeat 50% 50%;
-      mask: url('/images/collapse-icon.svg') no-repeat 50% 50%;  
+      background-image: url('/images/collapse-icon.svg');
 
       &:hover {
-        background-color: red;
+        background-image: url('/images/collapse-icon--hovered.svg');
+        color: red
       }
     }
   }
