@@ -27,7 +27,7 @@ type State = {
 
 class Collection extends React.Component<Props, State> {
   state = {
-    collapsed: false    
+    collapsed: true
   };
 
   onHeaderClick = () => {
@@ -42,7 +42,7 @@ class Collection extends React.Component<Props, State> {
     return (
       <div className="o-slinker-collection">
         <CollectionHeader handleHeaderClick={this.onHeaderClick} title={title} collapsed={this.state.collapsed} showExpandButton={cards ? true : false}/>
-        { this.state.collapsed && <CollectionCards cards={cards} /> }
+        { !this.state.collapsed && <CollectionCards cards={cards} /> }
       </div>
     );
   }
