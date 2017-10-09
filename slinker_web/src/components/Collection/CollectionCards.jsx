@@ -15,12 +15,13 @@ type Props = {
     link: string,
     title: string,
     description: string,
-    collapsed: boolean
-  }>
+    collapsed: boolean,
+  }>,
 };
 
-const createCardsList = card => (
-  <Card 
+const createCardsList = (card: {link: string, title: string, description: string, collapsed: boolean}) => (
+  <Card
+    key={card.link}
     link={card.link} 
     title={card.title} 
     description={card.description} 
@@ -28,7 +29,9 @@ const createCardsList = card => (
 );
 
 const CollectionCards = ({cards}: Props) => {
-  <div>
+  <div className="o-slinker-collectioncards">
     { cards.map(createCardsList) }
   </div>
-}
+};
+
+export default CollectionCards;
