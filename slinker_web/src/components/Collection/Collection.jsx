@@ -18,19 +18,6 @@ type State = {
   collapsed: boolean,
 };
 
-const renderExpanded = (title: string, collapsed: boolean, onHeaderClick: Function) => (
-  <div className="o-slinker-collection">
-    <CollectionHeader handleHeaderClick={onHeaderClick} title={title} collapsed={collapsed} />
-    <span>This will show a list of cards</span>
-  </div>
-);
-
-const renderCollapsed = (title: string, collapsed: boolean, onHeaderClick: Function) => (
-  <div className="o-slinker-collection">
-    <CollectionHeader handleHeaderClick={onHeaderClick} title={title} collapsed={collapsed} />
-    </div>
-);
-
 class Collection extends React.Component<Props, State> {
   state = {
     collapsed: false    
@@ -46,9 +33,10 @@ class Collection extends React.Component<Props, State> {
     const { title } = this.props;
 
     return (
-      this.state.collapsed 
-        ? renderCollapsed(title, this.state.collapsed, this.onHeaderClick) 
-        : renderExpanded(title, this.state.collapsed, this.onHeaderClick)          
+      <div className="o-slinker-collection">
+        <CollectionHeader handleHeaderClick={this.onHeaderClick} title={title} collapsed={this.state.collapsed} />
+        { this.state.collapsed && <span>This will show a list of cards</span> }
+      </div>
     );
   }
 }
