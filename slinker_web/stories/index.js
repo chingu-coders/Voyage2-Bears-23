@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Card from '../src/components/Card';
+import Header from '../src/components/Header/Header';
 
 import "../src/client/scss/style.scss";
 
@@ -30,4 +31,9 @@ storiesOf('Card', module)
       description="An example link"
       collapsed={true}
     />
+  ));
+
+storiesOf('Header', module)
+  .add('with search field', () => (
+    <Header />
   ));
