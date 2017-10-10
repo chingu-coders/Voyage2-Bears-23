@@ -14,7 +14,7 @@ type Props = {
 };
 
 const Header = ({ workspaces }: Props) => (
-  <div>Header</div>
+  <header className="o-slinker-header">Header</header>
 );
 
 export default Header;
