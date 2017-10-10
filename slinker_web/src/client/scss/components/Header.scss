@@ -1,5 +1,14 @@
 .o-slinker-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 3.5rem;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-family: 'Ubuntu', Arial, sans-serif;
+  color: #333;
+  background-color: #FFF;
+  box-shadow: 0 0.125rem 1rem rgba(183,183,206,0.2);
+  z-index: 400;
+  user-select: none;
 }
