@@ -10,7 +10,12 @@
 import React from 'react'
 
 const HeaderSearchField = () => (
-  <div className="o-slinker-headertabs">Search</div>
+  <div className="o-slinker-headersearch">
+    <input 
+      className="o-search-input"
+      placeholder="Search"/>
+    <button className="o-search-cancel"></button>
+  </div>
 );
 
 export default HeaderSearchField;

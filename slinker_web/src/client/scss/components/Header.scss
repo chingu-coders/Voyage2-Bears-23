@@ -12,3 +12,45 @@
   z-index: 400;
   user-select: none;
 }
+
+.o-slinker-headersearch {
+  position: relative;
+
+  .o-search-input {
+    min-width: 7rem;
+    line-height: normal;
+    font-size: 0.875rem;
+    color: #5e5d66;
+    height: 1.5rem;
+    padding: 0 1.75rem 0 2.25rem;
+    border: none;
+    border-right: 1px solid #b7b7ce;
+    background-color: rgba(0,0,0,0);    
+    background-position: 0.5rem center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2223%22%20height%3D%2223%22%20viewBox%3D%2218%2021%2023%2023%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20transform%3D%22rotate%2845%20-13.734%2044.387%29%22%20stroke%3D%22%23FA507B%22%3E%3Cellipse%20stroke-width%3D%222%22%20cx%3D%224.6%22%20cy%3D%224.5%22%20rx%3D%224.6%22%20ry%3D%224.5%22/%3E%3Cpath%20d%3D%22M10%205h6%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22/%3E%3C/g%3E%3C/svg%3E");
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;      
+    }
+  }
+
+  .o-search-cancel {
+    position: absolute;
+    display: none;
+    top: -0.1rem;
+    right: 0.3rem;
+    width: 1.5rem;
+    padding-top: 1.5rem;
+    background-color: rgba(0,0,0,0);    
+    background-position: center center;
+    background-size: 0.5rem 0.5rem;
+    background-repeat: no-repeat;
+    border: none;
+    text-indent: -1000rem;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml, %3Csvg%20width%3D%229%22%20height%3D%229%22%20viewBox%3D%223199%20-42%209%209%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20stroke-linecap%3D%22round%22%20stroke%3D%22%23979797%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M3200-41l6.93%206.93M3206.93-41l-6.93%206.93%22/%3E%3C/g%3E%3C/svg%3E");    
+  }
+}
