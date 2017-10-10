@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Card from '../src/components/Card';
 import Collection from '../src/components/Collection/Collection';
+import Header from '../src/components/Header/Header';
 import { cardsMockData } from './mockData';
 
 import "../src/client/scss/style.scss";
@@ -74,4 +75,9 @@ storiesOf('Collection', module)
         cards={cardsMockData}
       />
     </div>
+  ));
+  
+storiesOf('Header', module)
+  .add('with search field', () => (
+    <Header />
   ));

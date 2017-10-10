@@ -10,9 +10,10 @@
 import React from 'react'
 
 type Props = {
+  workspaces: Array<{}>,
 };
 
-const Header = ({}: Props) => (
+const Header = ({ workspaces }: Props) => (
   <div>Header</div>
 );
 
