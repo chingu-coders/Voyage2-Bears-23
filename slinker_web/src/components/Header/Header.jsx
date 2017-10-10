@@ -7,7 +7,7 @@
  *
  * @flow
  */
-import React from 'react'
+import React, { Component } from 'react'
 import HeaderSearchField from './HeaderSearchField';
 import HeaderTabs from './HeaderTabs';
 
@@ -15,11 +15,36 @@ type Props = {
   workspaces: Array<{}>,
 };
 
-const Header = ({ workspaces }: Props) => (
-  <header className="o-slinker-header">
-    <HeaderSearchField />
-    <HeaderTabs workspaces={workspaces} />
-  </header>
-);
+type State = {
+  searchValue: string,
+};
+
+class Header extends Component<Props, State>{
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      searchValue: '',
+    };
+  }
+
+  handleSearch = (input: string) => {
+    this.setState((prevState) => ({
+      searchValue: input,
+    }));
+  }
+
+  render() {
+    const { workspaces } = this.props;
+
+    return (
+      <header className="o-slinker-header">
+        <HeaderSearchField 
+          searchValue={this.state.searchValue} 
+          handleSearch={this.handleSearch} />
+        <HeaderTabs workspaces={workspaces} />
+      </header>
+    );
+  }
+}
 
 export default Header;
