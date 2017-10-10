@@ -8,13 +8,18 @@
  * @flow
  */
 import React from 'react'
+import HeaderSearchField from './HeaderSearchField';
+import HeaderTabs from './HeaderTabs';
 
 type Props = {
   workspaces: Array<{}>,
 };
 
 const Header = ({ workspaces }: Props) => (
-  <header className="o-slinker-header">Header</header>
+  <header className="o-slinker-header">
+    <HeaderSearchField />
+    <HeaderTabs workspaces={workspaces} />
+  </header>
 );
 
 export default Header;
