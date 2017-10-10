@@ -13,8 +13,8 @@ type Props = {
   workspaces: Array<{}>,
 };
   
-const HeaderSearchField = ({ workspaces }: Props) => (
-  <div className="o-slinker-headersearch">Tabs</div>
+const HeaderTabs = ({ workspaces }: Props) => (
+  <div className="o-slinker-headertabs">Tabs</div>
 );
 
-export default HeaderSearchField;
+export default HeaderTabs;
