@@ -34,6 +34,6 @@ storiesOf('Card', module)
   ));
 
 storiesOf('Header', module)
-  .add('with search field', () => (
+  .add('with search field and tabs', () => (
     <Header />
   ));

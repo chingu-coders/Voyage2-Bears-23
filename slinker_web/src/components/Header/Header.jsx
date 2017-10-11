@@ -12,7 +12,10 @@ import HeaderSearchField from './HeaderSearchField';
 import HeaderTabs from './HeaderTabs';
 
 type Props = {
-  workspaces: Array<{}>,
+  workspaces: Array<{
+    id: string,
+    name: string,
+  }>,
 };
 
 type State = {

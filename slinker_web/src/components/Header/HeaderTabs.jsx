@@ -10,11 +10,22 @@
 import React from 'react'
 
 type Props = {
-  workspaces: Array<{}>,
+  workspaces: Array<{
+    id: string,
+    name: string,
+  }>,
 };
-  
+
+const setWorkspaces = (workspace: {id: string, name: string}) => (
+  <div key={workspace.id}>
+    {workspace.name}
+  </div>
+);
+
 const HeaderTabs = ({ workspaces }: Props) => (
-  <div className="o-slinker-headertabs">Tabs</div>
+  <div className="o-slinker-headertabs">
+    { workspaces.map(setWorkspaces) }
+  </div>
 );
 
 export default HeaderTabs;
