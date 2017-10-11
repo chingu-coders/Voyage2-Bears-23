@@ -28,8 +28,14 @@ class Header extends Component<Props, State>{
   }
 
   handleSearch = (input: string) => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       searchValue: input,
+    }));
+  }
+
+  handleCancel = () => {
+    this.setState(prevState => ({
+      searchValue: '',
     }));
   }
 
@@ -40,7 +46,8 @@ class Header extends Component<Props, State>{
       <header className="o-slinker-header">
         <HeaderSearchField 
           searchValue={this.state.searchValue} 
-          handleSearch={this.handleSearch} />
+          handleSearch={this.handleSearch}
+          handleCancel={this.handleCancel} />
         <HeaderTabs workspaces={workspaces} />
       </header>
     );
