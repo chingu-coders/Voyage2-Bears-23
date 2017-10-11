@@ -17,9 +17,11 @@ type Props = {
 };
 
 const setWorkspaces = (workspace: {id: number, name: string}) => (
-  <div key={workspace.id}>
+  <button 
+    key={workspace.id}
+    className="o-header-tab">
     {workspace.name}
-  </div>
+  </button>
 );
 
 const HeaderTabs = ({ workspaces }: Props) => (

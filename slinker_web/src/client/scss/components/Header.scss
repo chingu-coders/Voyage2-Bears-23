@@ -69,3 +69,48 @@
     }
   }
 }
+
+.o-slinker-headertabs {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    display: block;
+    content: '';
+  }
+
+  .o-header-tab {
+    position: relative;
+    text-align: center;
+    padding: 0 1.5rem;
+    border: none;
+    height: 3.5rem;
+    color: #9795ac;
+    background: rgba(0,0,0,0.0);
+    transition: color 0.1s;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+      display: block;
+      height: 0.1875rem;
+      bottom: -1px;
+      right: 0.5rem;
+      left: 0.5rem;
+      background-color: #fa507b;
+      opacity: 0;
+      content: '';
+      transition: opacity 0.1s;
+      user-select: none;
+    }
+  }
+}
