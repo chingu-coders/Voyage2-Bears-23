@@ -13,7 +13,7 @@ import HeaderTabs from './HeaderTabs';
 
 type Props = {
   workspaces: Array<{
-    id: string,
+    id: number,
     name: string,
   }>,
 };
@@ -44,7 +44,7 @@ class Header extends Component<Props, State>{
 
   render() {
     const { workspaces } = this.props;
-
+    
     return (
       <header className="o-slinker-header">
         <HeaderSearchField 
