@@ -12,16 +12,20 @@ import React from 'react'
 type Props = {
   searchValue: string,
   handleSearch: Function,
+  handleCancel: Function,
 };
 
-const HeaderSearchField = ({ searchValue, handleSearch }: Props) => (
+const HeaderSearchField = ({ searchValue, handleSearch, handleCancel }: Props) => (
   <div className="o-slinker-headersearch">
     <input 
       className={searchValue.length > 0 ? "o-search-input searching": "o-search-input"}
       placeholder="Search"
       value={searchValue}
       onChange={(event) => handleSearch(event.target.value)}/>
-    <button className={searchValue.length > 0 ? "o-search-cancel visible": "o-search-cancel"}></button>
+    <button 
+      className={searchValue.length > 0 ? "o-search-cancel visible": "o-search-cancel"}
+      onClick={handleCancel}>
+    </button>
   </div>
 );
 
