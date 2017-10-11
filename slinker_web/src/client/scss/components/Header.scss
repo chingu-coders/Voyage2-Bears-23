@@ -63,5 +63,9 @@
     &.visible {
       display: block;
     }
+
+    &:focus {
+      outline: none;      
+    }
   }
 }
