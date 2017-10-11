@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const cardsMockData = [
   {
     link: 'https://www.example1.com',
@@ -43,3 +44,19 @@ export const cardsMockData = [
   },  
 ];
 
+=======
+export const tabsMockData = [
+  {
+    id: 1,
+    name: 'Chingu Voyage-2',
+  },
+  {
+    id: 2,
+    name: 'Amazon Workspace',
+  },
+  {
+    id: 3,
+    name: 'Google Workspace',
+  },  
+];
+>>>>>>> Display temporary tabs in React Storybook

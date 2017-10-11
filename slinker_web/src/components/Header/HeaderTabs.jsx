@@ -11,12 +11,12 @@ import React from 'react'
 
 type Props = {
   workspaces: Array<{
-    id: string,
+    id: number,
     name: string,
   }>,
 };
 
-const setWorkspaces = (workspace: {id: string, name: string}) => (
+const setWorkspaces = (workspace: {id: number, name: string}) => (
   <div key={workspace.id}>
     {workspace.name}
   </div>
