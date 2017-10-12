@@ -14,21 +14,25 @@ type Props = {
     id: number,
     name: string,
   }>,
+  activeTab: number,
+  handleTabSelect: Function,
 };
 
-const setWorkspaces = (workspace: {id: number, name: string}) => (
-  <div 
-    key={workspace.id}
-    className="o-header-tab">
-    <button className="o-header-tab-button">
-      {workspace.name}
-    </button>
-  </div>
-);
-
-const HeaderTabs = ({ workspaces }: Props) => (
+const HeaderTabs = ({ workspaces, activeTab, handleTabSelect }: Props) => (
   <div className="o-slinker-headertabs">
-    { workspaces.map(setWorkspaces) }
+    { workspaces.map(workspace => 
+        <div 
+          key={workspace.id}
+          className="o-header-tab">
+          <button 
+            className={`o-header-tab-button ${workspace.id === activeTab 
+              ? "active" 
+              : ""}`}
+            onClick={() => handleTabSelect(workspace.id)}>
+            {workspace.name}
+          </button>
+        </div>
+    ) }
   </div>
 );
 

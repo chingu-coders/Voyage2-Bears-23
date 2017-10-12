@@ -20,6 +20,7 @@ type Props = {
 
 type State = {
   searchValue: string,
+  activeTab: number,
 };
 
 class Header extends Component<Props, State>{
@@ -27,6 +28,7 @@ class Header extends Component<Props, State>{
     super(props);
     this.state = {
       searchValue: '',
+      activeTab: 0,
     };
   }
 
@@ -42,6 +44,12 @@ class Header extends Component<Props, State>{
     }));
   }
 
+  handleTabSelect = (id: number) => {
+    this.setState(prevState => ({
+      activeTab: id,
+    }));
+  }
+
   render() {
     const { workspaces } = this.props;
     
@@ -51,7 +59,10 @@ class Header extends Component<Props, State>{
           searchValue={this.state.searchValue} 
           handleSearch={this.handleSearch}
           handleCancel={this.handleCancel} />
-        <HeaderTabs workspaces={workspaces} />
+        <HeaderTabs 
+          workspaces={workspaces} 
+          activeTab={this.state.activeTab}
+          handleTabSelect={this.handleTabSelect}/>
       </header>
     );
   }

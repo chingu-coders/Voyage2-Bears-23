@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 3.5rem;
-  padding: 0.125rem 0.5rem;
+  padding: 0.125rem 0.5rem 0 0.5rem;
   font-size: 0.75rem;
   font-family: 'Ubuntu', Arial, sans-serif;
   color: #333;
@@ -73,18 +73,19 @@
 .o-slinker-headertabs {
   position: relative;
   display: flex;
-  justify-content: space-between;
   padding-left: 2rem;
   flex: 1 1 auto;
   font-size: 0.875rem;
 
-  &:before {
+  &::before {
     position: absolute;
+    left: 0;
     top: 0;
     bottom: 0;
     width: 2rem;
     display: block;
     content: '';
+    background: linear-gradient(to right, #fff 20%, rgba(255,255,255,0) 100%);    
   }
 
   .o-header-tab {
@@ -113,6 +114,7 @@
       }
 
       &::after {
+        box-sizing: inherit;
         position: absolute;
         display: block;
         height: 0.1875rem;
