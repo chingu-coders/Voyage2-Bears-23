@@ -39,7 +39,7 @@
     }
 
     &:focus {
-      outline: none;      
+      outline: 0;      
     }
   }
 
@@ -65,7 +65,7 @@
     }
 
     &:focus {
-      outline: none;      
+      outline: 0;      
     }
   }
 }
@@ -88,29 +88,48 @@
   }
 
   .o-header-tab {
-    position: relative;
-    text-align: center;
-    padding: 0 1.5rem;
-    border: none;
-    height: 3.5rem;
-    color: #9795ac;
-    background: rgba(0,0,0,0.0);
-    transition: color 0.1s;
-    opacity: 0.8;
-    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
 
-    &:after {
-      position: absolute;
-      display: block;
-      height: 0.1875rem;
-      bottom: -1px;
-      right: 0.5rem;
-      left: 0.5rem;
-      background-color: #fa507b;
-      opacity: 0;
-      content: '';
-      transition: opacity 0.1s;
-      user-select: none;
-    }
+    .o-header-tab-button {
+      position: relative;
+      text-align: center;
+      padding: 0 1.5rem;
+      border: none;
+      height: 3.5rem;
+      color: #9795ac;
+      background: rgba(0,0,0,0.0);
+      transition: color 0.1s;
+      opacity: 0.8;
+      cursor: pointer;
+  
+      &.active {
+        color: #5e5d66;
+        opacity: 1;
+
+        &::after {
+          opacity: 0.66;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        display: block;
+        height: 0.1875rem;
+        bottom: -1px;
+        right: 0.5rem;
+        left: 0.5rem;
+        background-color: #fa507b;
+        opacity: 0;
+        content: '';
+        transition: opacity 0.1s;
+        user-select: none;
+      }
+
+      &:focus {
+        outline: 0;
+      }
+  
+    }  
   }
 }
