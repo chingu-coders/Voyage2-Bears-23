@@ -15,6 +15,14 @@ type Props = {
   workspaces: Array<{
     id: number,
     name: string,
+    channels: Array<{
+      id: number,
+      name: string,
+      links: Array<{
+        id: number,
+        name: string,
+      }>,
+    }>,
   }>,
 };
 
@@ -53,6 +61,15 @@ class Header extends Component<Props, State>{
   render() {
     const { workspaces } = this.props;
     
+    const workspacesData = workspaces.map(workspace => {
+      console.log(workspaces);
+      return {
+        id: workspace.id,
+        name: workspace.name,
+        channelsNum: workspace.channels.length,
+      };
+    });
+
     return (
       <header className="o-slinker-header">
         <HeaderSearchField 
@@ -60,7 +77,7 @@ class Header extends Component<Props, State>{
           handleSearch={this.handleSearch}
           handleCancel={this.handleCancel} />
         <HeaderTabs 
-          workspaces={workspaces} 
+          workspacesData={workspacesData} 
           activeTab={this.state.activeTab}
           handleTabSelect={this.handleTabSelect}/>
       </header>

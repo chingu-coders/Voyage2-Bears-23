@@ -10,17 +10,18 @@
 import React from 'react'
 
 type Props = {
-  workspaces: Array<{
+  workspacesData: Array<{
     id: number,
     name: string,
+    channelsNum: number,
   }>,
   activeTab: number,
   handleTabSelect: Function,
 };
 
-const HeaderTabs = ({ workspaces, activeTab, handleTabSelect }: Props) => (
+const HeaderTabs = ({ workspacesData, activeTab, handleTabSelect }: Props) => (
   <div className="o-slinker-headertabs">
-    { workspaces.map(workspace => 
+    { workspacesData.map(workspace => 
         <div 
           key={workspace.id}
           className="o-header-tab">
@@ -29,7 +30,8 @@ const HeaderTabs = ({ workspaces, activeTab, handleTabSelect }: Props) => (
               ? "active" 
               : ""}`}
             onClick={() => handleTabSelect(workspace.id)}>
-            {workspace.name}
+            <span>{workspace.name}</span>
+            <span className="o-channelnumber">{workspace.channelsNum > 0 && workspace.channelsNum}</span>
           </button>
         </div>
     ) }
