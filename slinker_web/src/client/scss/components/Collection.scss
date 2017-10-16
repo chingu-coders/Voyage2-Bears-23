@@ -1,0 +1,51 @@
+.o-slinker-collection {
+  padding: 1.2rem 1rem 1.2rem;
+  font-family: 'Ubuntu', Arial, sans-serif;
+  border-bottom: 1px solid #000;
+}
+
+.o-slinker-collectionheader {
+  
+  &> h2.o-title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    line-height: 1.6;    
+    font-weight: normal;
+    font-size: 1rem;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &> button.o-icon {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    vertical-align: top;
+    padding: 1px 6px;
+    border: none;    
+    margin-left: 0.5rem;
+    text-indent: -1000rem;
+    text-transform: none;
+    background-size: 1.2rem 1.2rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: inherit;
+    outline: none;
+    cursor: pointer;
+
+    &__expand {
+      background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%22104%20683%2018%2018%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22M121.34%20691.895c0%204.665-3.78%208.446-8.445%208.446-4.663%200-8.445-3.78-8.445-8.445%200-4.664%203.782-8.445%208.445-8.445%204.664%200%208.445%203.78%208.445%208.445z%22%20fill%3D%22%23FA507B%22/%3E%3Cpath%20d%3D%22M108.906%20690.625l3.99%203.364M112.895%20693.99l3.99-3.365%22%20stroke%3D%22%23FFF%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    &__collapse {
+      background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%22111%20355%2020%2020%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke%3D%22%23FA507B%22%20stroke-width%3D%221.5%22%3E%3Cpath%20d%3D%22M112.66%20365.105c0-4.665%203.78-8.446%208.445-8.446%204.663%200%208.445%203.78%208.445%208.445%200%204.664-3.782%208.445-8.445%208.445-4.664%200-8.445-3.78-8.445-8.445zM125.094%20366.375l-3.99-3.364M121.105%20363.01l-3.99%203.365%22/%3E%3C/g%3E%3C/svg%3E");
+    }
+  }
+}
+
+.o-slinker-collectioncards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
