@@ -34,46 +34,81 @@
   &> span.o-icon {
     position: absolute;
     display: inline-block;
-    right: -0.9rem;
-    top: -0.6rem;
-    width: 1.2rem;
-    height: 1.2rem;
+    right: -0.7rem;
+    top: -0.5rem;
+    width: 1.0rem;
+    height: 1.0rem;
     background-repeat: no-repeat;
+    // border: 5px solid #000;
+    // border-radius: 15px;
+    padding: -15px;
 
     &__delete {
       // background-image: url('/images/close-cross-icon.svg');
 
+      & .cls-1 {
+        fill: #444444;
+      }
+
+      & .cls-2 {
+        fill: #ca2f2f;
+      }
+
+
       &:hover { // placeholder - eventually serve stateful images on hover
-        background-color: plum;
+
+
+        & .cls-1 {
+          fill: #ca2f2f;
+        }
+
+        & .cls-2 {
+          fill: #fff;
+        }
+
       }
     }
 
     &__edit {
-      top: 0.85rem;
+      top: 0.75rem;
       // background-image: url('/images/edit-pencil-icon.svg');
 
+      & .cls-1 {
+        fill: #444444;
+      }
+
+      & .cls-2 {
+        fill: #1ed4a3;
+      }
+
       &:hover { // placeholder - eventually serve stateful images on hover
-        background-color: powderblue;
+
+        & .cls-1 {
+          fill: #66b363;
+        }
+
+        & .cls-2 {
+          fill: #fff;
+        }
+
       }
     }
 
   }
 
+  // color: #773763;
+  // color: #238177;
+  // color: #177238;
+  // color: #238101;
+  // color: #101238;
+  // color: #FFFB00;
+  // color: #d80027;
 
-
-
-  color: #773763;
-  color: #238177;
-  color: #177238;
-  color: #238101;
-  color: #101238;
-  color: #FFFB00;
-  color: #d80027;
-
-  color: #4bddb3;
+  // color: #4bddb3;
   color: #ccdbd7;
-  color: #04bddb;
-  color: #222
+  // color: #04bddb;
+  // color: #222
+
 }
 
 

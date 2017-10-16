@@ -18,12 +18,22 @@ storiesOf('Button', module)
 
 
 storiesOf('Card', module)
-  .add('with text', () => (
+  .add('expanded mode', () => (
     <Card
       link="https://www.example.com"
       title="Example Link"
       description="An example link"
       collapsed={false}
+    />
+  ))
+  .add('expanded with hover', () => (
+    <Card
+      link="https://www.example.com"
+      title="Example Link"
+      description="An example link"
+      collapsed={false}
+      cardHoverState={true}
+      setCardHoverState={() => {}}
     />
   ))
   .add('collapsed mode', () => (
@@ -37,7 +47,7 @@ storiesOf('Card', module)
 
 storiesOf('Collection', module)
   .add('without Cards', () => (
-    <Collection 
+    <Collection
       title="resource-treasure"
     />
   ))
@@ -49,34 +59,34 @@ storiesOf('Collection', module)
   ))
   .add('with multiple Collections w/o Cards', () => (
     <div>
-      <Collection 
+      <Collection
         title="community-chat"
       />
-      <Collection 
+      <Collection
         title="resources-treasure"
       />
-      <Collection 
+      <Collection
         title="ask-for-help-here"
       />
     </div>
   ))
   .add('with multiple Collections with Cards', () => (
     <div>
-      <Collection 
+      <Collection
         title="community-chat"
         cards={cardsMockData}
       />
-      <Collection 
+      <Collection
         title="resources-treasure"
         cards={cardsMockData}
       />
-      <Collection 
+      <Collection
         title="ask-for-help-here"
         cards={cardsMockData}
       />
     </div>
   ));
-  
+
 storiesOf('Header', module)
   .add('with search field and tabs', () => (
     <Header workspaces={tabsMockData} />
