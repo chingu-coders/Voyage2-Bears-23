@@ -3,7 +3,7 @@
  * @date 08/10/2017
  *
  * @ticket SLNKR-013
- * @link https://trello.com/c/VM8EbP8T
+ * @link https://github.com/chingu-coders/Voyage2-Bears-23/projects/1#card-5023780
  *
  * @flow
  */

@@ -7,7 +7,6 @@
  *
  * @flow
  */
-// import { find, propEq } from 'ramda';
 import server from './server';
 import type { ServerType } from './server';
 

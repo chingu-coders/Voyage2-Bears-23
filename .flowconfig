@@ -11,6 +11,7 @@
 .*/node_modules/immutable/.*
 .*/node_modules/radium/.*
 .*/src/content/.*
+.*/.git/.*
 
 [include]
 

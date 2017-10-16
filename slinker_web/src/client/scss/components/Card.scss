@@ -16,7 +16,6 @@
     width: 7.5rem;
     padding: 1px;
   }
-
 }
 
 .o-slinker-cardheader {
@@ -39,13 +38,9 @@
     width: 1.0rem;
     height: 1.0rem;
     background-repeat: no-repeat;
-    // border: 5px solid #000;
-    // border-radius: 15px;
     padding: -15px;
 
     &__delete {
-      // background-image: url('/images/close-cross-icon.svg');
-
       & .cls-1 {
         fill: #444444;
       }
@@ -54,10 +49,7 @@
         fill: #ca2f2f;
       }
 
-
-      &:hover { // placeholder - eventually serve stateful images on hover
-
-
+      &:hover {
         & .cls-1 {
           fill: #ca2f2f;
         }
@@ -71,17 +63,16 @@
 
     &__edit {
       top: 0.75rem;
-      // background-image: url('/images/edit-pencil-icon.svg');
 
       & .cls-1 {
         fill: #444444;
       }
 
       & .cls-2 {
-        fill: #1ed4a3;
+        fill: #66b363;
       }
 
-      &:hover { // placeholder - eventually serve stateful images on hover
+      &:hover {
 
         & .cls-1 {
           fill: #66b363;
@@ -95,19 +86,6 @@
     }
 
   }
-
-  // color: #773763;
-  // color: #238177;
-  // color: #177238;
-  // color: #238101;
-  // color: #101238;
-  // color: #FFFB00;
-  // color: #d80027;
-
-  // color: #4bddb3;
-  color: #ccdbd7;
-  // color: #04bddb;
-  // color: #222
 
 }
 

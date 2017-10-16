@@ -41,28 +41,28 @@ class Header extends Component<Props, State>{
   }
 
   handleSearch = (input: string) => {
-    this.setState(prevState => ({
+    this.setState(() => ({
       searchValue: input,
     }));
   }
 
   handleCancel = () => {
-    this.setState(prevState => ({
+    this.setState(() => ({
       searchValue: '',
     }));
   }
 
   handleTabSelect = (id: number) => {
-    this.setState(prevState => ({
+    this.setState(() => ({
       activeTab: id,
     }));
   }
 
   render() {
     const { workspaces } = this.props;
-    
+
     const workspacesData = workspaces.map(workspace => {
-      console.log(workspaces);
+      console.log(workspaces);  // eslint-disable-line no-console
       return {
         id: workspace.id,
         name: workspace.name,
@@ -72,12 +72,12 @@ class Header extends Component<Props, State>{
 
     return (
       <header className="o-slinker-header">
-        <HeaderSearchField 
-          searchValue={this.state.searchValue} 
+        <HeaderSearchField
+          searchValue={this.state.searchValue}
           handleSearch={this.handleSearch}
           handleCancel={this.handleCancel} />
-        <HeaderTabs 
-          workspacesData={workspacesData} 
+        <HeaderTabs
+          workspacesData={workspacesData}
           activeTab={this.state.activeTab}
           handleTabSelect={this.handleTabSelect}/>
       </header>
