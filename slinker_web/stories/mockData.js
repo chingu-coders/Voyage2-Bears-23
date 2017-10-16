@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const cardsMockData = [
   {
     link: 'https://www.example1.com',
@@ -44,7 +43,6 @@ export const cardsMockData = [
   },  
 ];
 
-=======
 export const tabsMockData = [
   {
     id: 1,
@@ -92,4 +90,4 @@ export const tabsMockData = [
     name: 'Google Workspace',
     channels: [],
   },  
-];>>>>>>> Display temporary tabs in React Storybook
+];
