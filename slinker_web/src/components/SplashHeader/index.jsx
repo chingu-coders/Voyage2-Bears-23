@@ -7,7 +7,7 @@
  *
  * @flow
  */
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 type Props = {
 };
@@ -25,8 +25,8 @@ class SplashHeader extends Component<Props, State>{
   render() {
     return (
       <header className="o-splash-header">
-        <div className="header-logo"></div>
-        <button>Add to Slack</button>
+        <div className="header-logo">Slinker</div>
+        <button className="header-button">Add to Slack</button>
       </header>
     );
   }

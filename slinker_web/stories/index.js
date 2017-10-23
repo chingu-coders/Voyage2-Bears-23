@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import Card from '../src/components/Card';
 import Collection from '../src/components/Collection';
 import Header from '../src/components/Header';
+import SplashHeader from '../src/components/SplashHeader';
 import { cardsMockData, tabsMockData } from './mockData';
 
 import "../src/client/scss/style.scss";
@@ -90,4 +91,9 @@ storiesOf('Collection', module)
 storiesOf('Header', module)
   .add('with search field and tabs', () => (
     <Header workspaces={tabsMockData} />
+  ));
+
+storiesOf('SplashHeader', module)
+  .add('with title & Add to Slack button', () => (
+    <SplashHeader />
   ));

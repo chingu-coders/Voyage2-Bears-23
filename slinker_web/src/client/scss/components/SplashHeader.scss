@@ -1,0 +1,21 @@
+.o-splash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  font-family: 'Ubuntu', Arial, sans-serif;
+  color: #FFF;
+  background-color: #fa507b;
+
+  & .header-logo {
+    font-size: 2rem;
+  }
+
+  & .header-button {
+    border: none;
+    background-color: #eee;
+    padding: 6px 10px;
+    border-radius: 3px;
+  }
+
+}
