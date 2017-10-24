@@ -62,7 +62,6 @@ class Header extends Component<Props, State>{
     const { workspaces } = this.props;
 
     const workspacesData = workspaces.map(workspace => {
-      console.log(workspaces);  // eslint-disable-line no-console
       return {
         id: workspace.id,
         name: workspace.name,
