@@ -16,9 +16,8 @@ type Props = {
   showExpandButton: boolean,
 };
 
-
 const CollectionHeader = ({title, collapsed, handleHeaderClick, showExpandButton}: Props) => (
-  <div className="o-slinker-collectionheader" onClick={handleHeaderClick}>
+  <div className="o-slinker-collectionheader" onClick={() => handleHeaderClick(!collapsed)}>
     <h2 className="o-title">{title}</h2>
     { showExpandButton && (
       collapsed
