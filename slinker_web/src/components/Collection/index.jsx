@@ -7,7 +7,9 @@
  *
  * @flow
  */
-import React from 'react'
+import React from 'react';
+import { withState, compose } from 'recompose';
+
 import CollectionHeader from './CollectionHeader';
 import CollectionCards from './CollectionCards';
 
