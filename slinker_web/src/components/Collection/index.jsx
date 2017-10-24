@@ -36,7 +36,7 @@ const Collection = ({
   setCollectionCollapseState
 }: Props) => (
   <div className="o-slinker-collection">
-    <CollectionHeader handleHeaderClick={setCollectionCollapseState} title={title} collapsed={collectionCollapseState} showExpandButton={cards ? true : false}/>
+    <CollectionHeader handleHeaderClick={setCollectionCollapseState} title={title} collapsed={collectionCollapseState} withCards={cards ? true : false}/>
     { !collectionCollapseState && <CollectionCards cards={cards} /> }
   </div>
 );
