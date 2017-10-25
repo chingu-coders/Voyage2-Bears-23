@@ -7,7 +7,7 @@
  *
  * @flow
  */
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import HeaderSearchField from './HeaderSearchField';
 import HeaderTabs from './HeaderTabs';
 
@@ -28,7 +28,6 @@ type Props = {
 
 type State = {
   searchValue: string,
-  activeTab: number,
 };
 
 class Header extends Component<Props, State>{
@@ -36,7 +35,6 @@ class Header extends Component<Props, State>{
     super(props);
     this.state = {
       searchValue: '',
-      activeTab: 0,
     };
   }
 
@@ -49,12 +47,6 @@ class Header extends Component<Props, State>{
   handleCancel = () => {
     this.setState(() => ({
       searchValue: '',
-    }));
-  }
-
-  handleTabSelect = (id: number) => {
-    this.setState(() => ({
-      activeTab: id,
     }));
   }
 
@@ -75,10 +67,7 @@ class Header extends Component<Props, State>{
           searchValue={this.state.searchValue}
           handleSearch={this.handleSearch}
           handleCancel={this.handleCancel} />
-        <HeaderTabs
-          workspacesData={workspacesData}
-          activeTab={this.state.activeTab}
-          handleTabSelect={this.handleTabSelect}/>
+        <HeaderTabs workspacesData={workspacesData} />
       </header>
     );
   }

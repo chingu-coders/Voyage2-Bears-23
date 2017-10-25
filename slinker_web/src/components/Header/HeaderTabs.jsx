@@ -7,7 +7,8 @@
  *
  * @flow
  */
-import React from 'react'
+import React from 'react';
+import { withState, compose } from 'recompose';
 
 type Props = {
   workspacesData: Array<{
@@ -15,21 +16,25 @@ type Props = {
     name: string,
     channelsNum: number,
   }>,
-  activeTab: number,
-  handleTabSelect: Function,
+  activeTabState: number,
+  setActiveTabState: Function,
 };
 
-const HeaderTabs = ({ workspacesData, activeTab, handleTabSelect }: Props) => (
+const enhance = compose(
+  withState('activeTabState', 'setActiveTabState', 0)
+);
+
+const HeaderTabs = ({ workspacesData, activeTabState, setActiveTabState }: Props) => (
   <div className="o-slinker-headertabs">
     { workspacesData.map(workspace => 
         <div 
           key={workspace.id}
           className="o-header-tab">
           <button 
-            className={`o-header-tab-button ${workspace.id === activeTab 
+            className={`o-header-tab-button ${workspace.id === activeTabState 
               ? "active" 
               : ""}`}
-            onClick={() => handleTabSelect(workspace.id)}>
+            onClick={() => setActiveTabState(workspace.id)}>
             <span>{workspace.name}</span>
             <span className="o-channelnumber">{workspace.channelsNum > 0 && workspace.channelsNum}</span>
           </button>
@@ -38,4 +43,6 @@ const HeaderTabs = ({ workspacesData, activeTab, handleTabSelect }: Props) => (
   </div>
 );
 
-export default HeaderTabs;
+const EnhancedHeaderTabs = enhance(HeaderTabs);
+
+export default EnhancedHeaderTabs;
