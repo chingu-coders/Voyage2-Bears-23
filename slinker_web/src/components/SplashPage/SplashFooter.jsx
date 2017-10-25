@@ -10,10 +10,10 @@
 
 import React from 'react';
 
-const SplashPageFooter = () => (
+const SplashFooter = () => (
   <div className="o-splash-footer">
     Footer Component
   </div>
 );
 
-export default SplashPageFooter;
+export default SplashFooter;

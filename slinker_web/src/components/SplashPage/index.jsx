@@ -9,15 +9,15 @@
  */
 
 import React from 'react';
-import SplashPageHeader from './SplashPageHeader';
-import SplashPageMain from './SplashPageMain';
-import SplashPageFooter from './SplashPageFooter';
+import SplashHeader from './SplashHeader';
+import SplashMain from './SplashMain';
+import SplashFooter from './SplashFooter';
 
 const SplashPage = () => (
   <div>
-    <SplashPageHeader />
-    <SplashPageMain />
-    <SplashPageFooter />
+    <SplashHeader />
+    <SplashMain />
+    <SplashFooter />
   </div>
 );
 

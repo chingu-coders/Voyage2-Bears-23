@@ -10,11 +10,11 @@
 
 import React from 'react';
 
-const SplashPageHeader = () => (
+const SplashHeader = () => (
   <div className="o-splash-header">
     <div className="header-logo">Slinker</div>
     <div className="header-button">Add to Slask</div>
   </div>
 );
 
-export default SplashPageHeader;
+export default SplashHeader;

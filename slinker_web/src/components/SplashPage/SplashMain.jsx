@@ -10,10 +10,10 @@
 
 import React from 'react';
 
-const SplashPageMain = () => (
+const SplashMain = () => (
   <div className="o-splash-main">
     Main Component
   </div>
 );
 
-export default SplashPageMain;
+export default SplashMain;
