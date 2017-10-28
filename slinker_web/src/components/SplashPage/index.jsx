@@ -14,7 +14,7 @@ import SplashMain from './SplashMain';
 import SplashFooter from './SplashFooter';
 
 const SplashPage = () => (
-  <div>
+  <div className="o-splash-page">
     <SplashHeader />
     <SplashMain />
     <SplashFooter />

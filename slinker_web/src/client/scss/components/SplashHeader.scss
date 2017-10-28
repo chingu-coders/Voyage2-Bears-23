@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  font-family: 'Ubuntu', Arial, sans-serif;
-  color: #FFF;
+  color: #fff;
   background-color: #fa507b;
 
   & .header-logo {
     font-size: 2rem;
+    text-transform: uppercase;
   }
 
   & .header-button {
