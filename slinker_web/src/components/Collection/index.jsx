@@ -7,7 +7,9 @@
  *
  * @flow
  */
-import React from 'react'
+import React from 'react';
+import { withState, compose } from 'recompose';
+
 import CollectionHeader from './CollectionHeader';
 import CollectionCards from './CollectionCards';
 
@@ -19,33 +21,26 @@ type Props = {
     description: string,
     collapsed: boolean,
   }>,
+  collectionCollapseState: boolean,
+  setCollectionCollapseState: Function
 };
 
-type State = {
-  collapsed: boolean,
-};
+const enhance = compose(
+  withState('collectionCollapseState', 'setCollectionCollapseState', true)
+);
 
-class Collection extends React.Component<Props, State> {
-  state = {
-    collapsed: true
-  };
+const Collection = ({
+  title,
+  cards,
+  collectionCollapseState,
+  setCollectionCollapseState
+}: Props) => (
+  <div className="o-slinker-collection">
+    <CollectionHeader handleHeaderClick={setCollectionCollapseState} title={title} collapsed={collectionCollapseState} withCards={cards ? true : false}/>
+    { !collectionCollapseState && <CollectionCards cards={cards} /> }
+  </div>
+);
 
-  onHeaderClick = () => {
-    this.setState(prevState => ({
-      collapsed: !prevState.collapsed
-    }));
-  }
+const enhancedCollection = enhance(Collection);
 
-  render() {
-    const { title, cards } = this.props;
-
-    return (
-      <div className="o-slinker-collection">
-        <CollectionHeader handleHeaderClick={this.onHeaderClick} title={title} collapsed={this.state.collapsed} showExpandButton={cards ? true : false}/>
-        { !this.state.collapsed && <CollectionCards cards={cards} /> }
-      </div>
-    );
-  }
-}
-
-export default Collection;
+export default enhancedCollection;

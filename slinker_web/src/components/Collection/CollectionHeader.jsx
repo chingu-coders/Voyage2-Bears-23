@@ -13,19 +13,40 @@ type Props = {
   title: string,
   collapsed: boolean,
   handleHeaderClick: Function,
-  showExpandButton: boolean,
+  withCards: boolean,
 };
 
-
-const CollectionHeader = ({title, collapsed, handleHeaderClick, showExpandButton}: Props) => (
-  <div className="o-slinker-collectionheader" onClick={handleHeaderClick}>
+const renderWithCards = (
+  title: string,
+  collapsed: boolean,
+  handleHeaderClick: Function
+) => (
+  <div className="o-slinker-collectionheader" onClick={() => handleHeaderClick(!collapsed)}>
     <h2 className="o-title">{title}</h2>
-    { showExpandButton && (
-      collapsed
+    { collapsed
         ? <button className="o-icon o-icon__expand">Expand or Collapse</button>
         : <button className="o-icon o-icon__collapse">Expand or Collapse</button>
-    )}
+    }
   </div>
+);
+
+const renderWithoutCards = (
+  title: string
+) => (
+  <div className="o-slinker-collectionheader">
+    <h2 className="o-title">{title}</h2>
+  </div>
+);
+
+const CollectionHeader = ({
+  title, 
+  collapsed, 
+  handleHeaderClick, 
+  withCards
+}: Props) => (
+  withCards
+    ? renderWithCards(title, collapsed, handleHeaderClick)
+    : renderWithoutCards(title)
 );
 
 export default CollectionHeader;
