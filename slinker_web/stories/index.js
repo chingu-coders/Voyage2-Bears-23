@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import Card from '../src/components/Card';
 import Collection from '../src/components/Collection';
 import Header from '../src/components/Header';
+import SplashPage from '../src/components/SplashPage';
 import SplashHeader from '../src/components/SplashPage/SplashHeader';
 import { cardsMockData, tabsMockData } from './mockData';
 
@@ -96,4 +97,9 @@ storiesOf('Header', module)
 storiesOf('SplashHeader', module)
   .add('with title & Add to Slack button', () => (
     <SplashHeader />
+  ));
+
+storiesOf('SplashPage', module)
+  .add('with SplasHeader, SplashMain and SplashFooter', () => (
+    <SplashPage />
   ));
